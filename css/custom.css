@@ -1,6 +1,27 @@
+
+nav {
+
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  padding: 15px;
+  background-color: #36053a;
+  -webkit-box-shadow: 4px 6px 31px -2px rgba(5,5,5,0.93);
+  -moz-box-shadow: 4px 6px 31px -2px rgba(5,5,5,0.93);
+  box-shadow: 4px 6px 31px -2px rgba(5,5,5,0.93);
+}
+nav .navbar-brand {
+    color: #bd99d882;
+}
+#buscar input {
+  border-radius: 11px 11px 11px 11px;
+  -moz-border-radius: 11px 11px 11px 11px;
+  -webkit-border-radius: 11px 11px 11px 11px;
+  border: 0px solid #000000;
+}
+
 #buscar {
     position: relative;
-    
+
 }
 @media (max-width: 768px) {
     #buscar,
@@ -15,4 +36,10 @@
     top:100%;
     z-index: 100;
     width:100%;
+}
+#mapa{
+  border:3px solid #7e2071;
+  -webkit-box-shadow: 4px 6px 41px -6px rgba(0,0,0,0.65);
+  -moz-box-shadow: 4px 6px 41px -6px rgba(0,0,0,0.65);
+  box-shadow: 4px 6px 41px -6px rgba(0,0,0,0.65);
 }
