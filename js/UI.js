@@ -9,11 +9,14 @@ class Interface {
 
       }
       /**
-        * @description Initialize a map ith the establisments
+        * @description Initialize a map with the loaction and
+        * the zoom then print on the DOM.
+        * @return {object} map
+        * @author Andres Acosta
       */
       initializeMap() {
 
-            const map =L.map('mapa').setView([6.228458, -75.6091506],12)
+            const map = L.map('mapa').setView([6.228458, -75.6091506],12)
             const linkMap = '<a href="http://openstreetmap.org">OpenStreetMap</a>'
             L.tileLayer(
                   'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -23,11 +26,17 @@ class Interface {
 
             return map
       }
-
+      /**
+        * @description Get the points where they sell gasolina
+        * throught a call to method getData() then invoke the fuction
+        * to print them on teh DOM
+        * @return {void}
+        * @author Andres Acosta
+      */
       showEstablishments() {
             this.api.getData()
                   .then(data =>{
-                        console.log(data)
+
                         const result = data.JSONResponse
                         /**
                          * Show pins on the map
@@ -35,6 +44,13 @@ class Interface {
                         this.showPins(result)
                   })
       }
+      /**
+        * @description Mark each point of sale of gasoline
+        * provided in the parameters on the map.
+        * @param {object} data contains the points to be marked
+        * @return {void}
+        * @author Andres Acosta
+      */
       showPins(data) {
             this.markers.clearLayers()
             data.pop()
@@ -66,7 +82,7 @@ class Interface {
 
       }
       /**
-        * Get suggest fromo REST API
+        * Get suggest from REST AP
       */
       getSeuggest(search) {
             this.api.getData()
@@ -77,7 +93,13 @@ class Interface {
       }
 
       /**
-        * Get suggest fromo REST API
+        * @description Make a comparison between a value of the object and
+        * what the user writes in real time.
+        * @param {object} results the response of API with the places where
+        * they sell gasoline
+        * @param {string} search waht the user is writing ritgh now
+        * @return {void}
+        * @author Andres Acosta
       */
       filterSuggest(results, search) {
 
