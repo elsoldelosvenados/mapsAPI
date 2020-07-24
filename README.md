@@ -8,7 +8,7 @@ This is a practical project in which openStreetMap is used to draw a map of Mede
 ---
 
 <p align="center">
-  <img alt="Maps image" src="https://raw.githubusercontent.com/andrewakosta/images/master/Map_app.png?token=ALLKOOBVFR4FDLEXNDHKUC27DIIJ6">
+  <img alt="Maps image" src="https://images-projects.s3-sa-east-1.amazonaws.com/Map_app.png">
 </p>
 
 ## Project structure
