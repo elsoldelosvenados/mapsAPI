@@ -4,7 +4,7 @@
 const UI = new Interface()
 
 document.addEventListener('DOMContentLoaded', () =>{
-
+      checkScreen()
       UI.showEstablishments()
 })
 
@@ -21,3 +21,9 @@ seeker.addEventListener('input', ()=>{
             UI.showEstablishments()
       }
 })
+
+function checkScreen() {
+      if(screen.width >  780){
+         document.getElementById('br-title').remove()
+      }
+}

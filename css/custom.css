@@ -24,9 +24,14 @@ nav .navbar-brand {
 
 }
 @media (max-width: 768px) {
-    #buscar,
-    #buscar input {
-        width: 100%;
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
+    .navar-brand{
+        display: flex;
+        flex-direction: column;
+    }
     }
 }
 
